@@ -1,0 +1,19 @@
+.pm10 {
+    margin:25px;
+}
+
+.pm25 {
+    margin:10px;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: xx-large;
+  }
+
+  
