@@ -37,7 +37,7 @@ function AirCity({
     <div className="Dust">
       <h3>
         <span className="측정소">측정소</span><br></br>
-        <span className="station">{stationName}</span><br></br>
+        <span className="stationName">{stationName}</span><br></br>
         <span className="sidoName">{sidoName}</span>
       </h3>
       <div className="date">측정일시 : {date}</div>

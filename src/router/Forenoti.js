@@ -37,6 +37,8 @@ class Forenoti extends Component {
           <div className="loader">로딩 중...</div> :
           <div className="information">
             <Fn
+              img2={data[0].imageUrl2}
+              img5={data[0].imageUrl5}
               infoC={data[0].informCause}
               infoO={data[0].informOverall}
               infoD={data[0].informDate}
