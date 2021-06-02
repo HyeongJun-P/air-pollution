@@ -9,7 +9,7 @@ class ApPage extends React.Component {
       isLoading: true,
       data: {},
       loader_text: "데이터 불러오는 중...",
-      city:"수지",
+      city:"김량장동",
     }
   
 
@@ -28,9 +28,6 @@ class ApPage extends React.Component {
     this.getDust();
   }
 
-  componentWillUnmount(){
-    
-  }
 
   render() {
     // 필요한 데이터 목록 stationName, dataTime, coValue, o3Value, no2Value, o3Value, pm10Value, pm25Value, khaiValue 그외 &Grade

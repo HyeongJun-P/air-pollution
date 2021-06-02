@@ -1,12 +1,22 @@
 import React from 'react';
+import "./Fn.css";
 
 function Fn({infoC,infoO,infoD,dTime}){
     return(
         <div className="Fore">
-            {infoC}
-            {infoO}
-            {infoD}
-            {dTime}
+            <span className="dtime">{dTime}</span>
+            <div className="notice">
+            <p>
+                {infoC}
+            </p>    
+            <p>
+                {infoO}
+            </p>
+            <p>
+                {infoD}
+            </p>
+            </div>
+            
         </div>
     );
 }
