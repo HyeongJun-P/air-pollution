@@ -28,6 +28,10 @@ b {
 }
 
 .station {
+    font-weight: 100;
+    font-size: 0.5em;
+}
+.sidoName {
     font-weight: 400;
 }
 
