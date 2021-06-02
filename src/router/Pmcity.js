@@ -2,7 +2,7 @@ import React from 'react';
 import axios from "axios";
 
 
-class MsStation extends React.Component {
+class PmCity extends React.Component {
     state = {
         isLoading:true,
         data:{},
@@ -18,6 +18,8 @@ class MsStation extends React.Component {
             isLoading:false,
             data:items,
         }) 
+        console.log(this.state.data);
+
     }
 
     componentDidMount(){
@@ -33,4 +35,4 @@ class MsStation extends React.Component {
     }
 }
  
-export default MsStation;
+export default PmCity;

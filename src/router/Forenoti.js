@@ -16,13 +16,13 @@ class Forenoti extends Component {
 
     const { data: { response: { body: { items } } } } = await axios.get(url);
 
-    console.log(items);
-
+    
     this.setState({
       data: items,
       isLoading: false,
     });
-
+    
+    console.log(this.state.data);
   };
 
   componentDidMount() {

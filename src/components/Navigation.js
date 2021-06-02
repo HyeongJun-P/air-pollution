@@ -4,8 +4,9 @@ import "./Navigation.css";
 
 function Navigation() {
     return <div className="nav">
-        <Link to="/Forenoti">예보통보</Link>
         <Link to="/">대기오염</Link>
+        <Link to="/Forenoti">예보통보</Link>
+        <Link to="/Pmcity">시도별</Link>
     </div>
 }
 
