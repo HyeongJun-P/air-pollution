@@ -67,13 +67,11 @@ function Air({
           {no2vl}ppm<br></br>
           <Grade Grade={no2gr} />
         </p>
-        <div className="All">
-          <p>
+        <p>
           통합대기환경수치<br></br>
-          {khaivl}<br></br>
+          {khaivl}ppm<br></br>
           <Grade Grade={khaigr} />
-          </p>
-        </div>
+        </p>
       </div>
     </div>
   );
