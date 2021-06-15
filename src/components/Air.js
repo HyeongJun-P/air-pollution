@@ -50,25 +50,25 @@ function Air({
         grade: <Grade Grade={pm25gr} />
       </div>
       <div className="flex">
-        <p>
+        <p className="pm">
           오존
           <br></br>
           {o3vl}ppm
           <br></br>
           <Grade Grade={o3gr} />
         </p>
-        <p>
+        <p className="pm">
           일산화탄소<br></br>
           {covl}ppm<br></br>
           <Grade Grade={cogr} />
         </p>
-        <p>
+        <p className="pm">
           이산화질소<br></br>
           {no2vl}ppm<br></br>
           <Grade Grade={no2gr} />
         </p>
         <div className="All">
-          <p>
+          <p className="pm">
           통합대기환경수치<br></br>
           {khaivl}<br></br>
           <Grade Grade={khaigr} />
