@@ -12,7 +12,7 @@ class Forenoti extends Component {
   getForenoti = async () => {
     const API_KEY = process.env.REACT_APP_API_KEY;
     const today = new Date().toISOString().substring(0, 10);
-    const url = `/getMinuDustFrcstDspth?serviceKey=${API_KEY}&returnType=json&numOfRows=1&pageNo=1&searchDate=${today}`;
+    const url = `/  getMinuDustFrcstDspth?serviceKey=${API_KEY}&returnType=json&numOfRows=1&pageNo=1&searchDate=${today}`;
 
     const { data: { response: { body: { items } } } } = await axios.get(url);
 

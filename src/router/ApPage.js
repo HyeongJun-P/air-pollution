@@ -38,24 +38,30 @@ class ApPage extends React.Component {
     this.getDust();
   }
 
+  componentDidUpdate() {
+    console.log(this.city);
+  }
 
+  cityName= (e) => {
+    this.setState({
+      city: e.target.value
+    })
+  }
 
   render() {
     // 필요한 데이터 목록 stationName, dataTime, coValue, o3Value, no2Value, o3Value, pm10Value, pm25Value, khaiValue 그외 &Grade
 
     
     const { isLoading, data, loader_text, city } = this.state;
-    console.log(data[0]);
-    // if(data[0].coFlag === "점검및교정") {
-    //   this.setState({
-    //     loader_text:'현재 서버 점검 중...'
-    //   })
-    // }
-    
+
     return (
       <section className="container">
         {isLoading ? (
-          <div className="loader">{loader_text}</div>
+          <div className="loader">{loader_text}
+            <div className="cityInput">
+              <input type="text" onChange={this.cityName}></input>
+            </div>
+          </div>
         ) : (
           <div className="airState">
             {
