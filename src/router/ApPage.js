@@ -8,7 +8,7 @@ class ApPage extends React.Component {
   state = {
       isLoading: true,
       data: {},
-      loader_text: "데이터 불러오는 중...",
+      loader_text: "",
       city:"김량장동",
     }
   
@@ -18,10 +18,20 @@ class ApPage extends React.Component {
     const url = `/getMsrstnAcctoRltmMesureDnsty?stationName=${this.state.city}&dataTerm=month&pageNo=1&numOfRows=1&returnType=json&serviceKey=${API_KEY}&ver=1.3`;
     const { data: { response: { body: { items } } } } = await axios.get(url);
     
-    this.setState({
-      isLoading:false, data:items,
-    });
-    console.log(this.state.data);
+    if(items[0].coFlag === "점검및교정") {
+      this.setState({
+        loader_text:"현재 서버 점검 중.."
+      })
+    } else {
+      this.setState({
+        loader_text:"데이터 불러오는 중..."
+      })
+    }
+
+    // this.setState({
+    //   isLoading:false, data:items,
+    // });
+    // console.log(items);
   }
 
   componentDidMount() {
@@ -29,11 +39,19 @@ class ApPage extends React.Component {
   }
 
 
+
   render() {
     // 필요한 데이터 목록 stationName, dataTime, coValue, o3Value, no2Value, o3Value, pm10Value, pm25Value, khaiValue 그외 &Grade
 
+    
     const { isLoading, data, loader_text, city } = this.state;
-
+    console.log(data[0]);
+    // if(data[0].coFlag === "점검및교정") {
+    //   this.setState({
+    //     loader_text:'현재 서버 점검 중...'
+    //   })
+    // }
+    
     return (
       <section className="container">
         {isLoading ? (
